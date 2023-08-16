@@ -1,6 +1,6 @@
 defmodule Aoc.Day04 do
   def part1(args) do
-    Enum.map(args, &score_line/1) |> Enum.sum()
+    Enum.map(args, &score_part1/1) |> Enum.sum()
   end
 
   def part2(args) do
@@ -17,7 +17,7 @@ defmodule Aoc.Day04 do
     end
   end
 
-  def score_line(line) do
+  def score_part1(line) do
     case parse_line(line) |> contains do
       true ->
         1
